@@ -160,6 +160,20 @@ You can use this repository as a template for your own worker using [`wrangler`]
 wrangler generate projectname https://github.com/backblaze-b2-samples/cloudflare-b2
 ```
 
+## Fix wrangler generate being deprecated
+
+Blog post: https://www.backblaze.com/docs/cloud-storage-deliver-private-backblaze-b2-content-through-cloudflare-cdn#create-an-application-key
+
+With wrangler generate being deprecated, you now need to use wrangler init <project_name>
+
+Then select "Template from a GitHub repo"
+
+This error shows:
+
+╰ ERROR Error: create-cloudflare templates must contain a "wrangler.toml" or "wrangler.json(c)" file.
+
+The pull request is to rename wrangler.toml.template to wrangler.toml to fix this.
+
 ## Serverless
 
 To deploy using serverless add a [`serverless.yml`](https://serverless.com/framework/docs/providers/cloudflare/) file.
